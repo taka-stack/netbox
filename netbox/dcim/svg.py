@@ -22,7 +22,7 @@ def get_device_name(device):
     if device.virtual_chassis:
         return f'{device.virtual_chassis.name}:{device.vc_position}'
     elif device.name:
-        return (device.name,device.primary_ipv4,device.serial,device.primary_ip4)
+        return (device.name,device.primary_ip4,device.serial)
     else:
         return str(device.device_type)
 
